@@ -18,6 +18,7 @@ const NotificationSettings = () => {
   const storeNotificationData = (enableNotifications) => {
     Settings.set(enableNotifications);
     setenableNotifications(Settings.get("enableNotifications"));
+    setenableFocus(false);
   };
   const storeFocusData = (enableFocus) => {
     Settings.set(enableFocus);

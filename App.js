@@ -17,7 +17,7 @@ export default function App() {
     <NavigationContainer theme={colorScheme==='dark'?myDarkTheme:myLightTheme}>
       <StatusBar/>
       <MainStack.Navigator initialRouteName='App'>
-        <MainStack.Screen name='Welcome' component={WelcomeScreen}/>
+        <MainStack.Screen name='Welcome' component={WelcomeScreen} options={{headerShown:false}}/>
         <MainStack.Screen name='Login' component={LoginScreen}/>
         <MainStack.Screen name='Profile Details' component={LoginProfileDetailsScreen}/>
         <MainStack.Screen name='App' component={HomeScreen} options={{headerShown:false}}/>

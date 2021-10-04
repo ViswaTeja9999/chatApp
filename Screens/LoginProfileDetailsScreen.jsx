@@ -42,7 +42,20 @@ const LoginProfileDetailsScreen = ({ navigation }) => {
         const { status } =
           await ImagePicker.requestMediaLibraryPermissionsAsync();
         if (status !== "granted") {
-          alert("Sorry, we need camera roll permissions to make this work!");
+          Alert.alert(
+            "Camera Roll Permission Requried",
+            "Sorry, we need camera roll permissions to add your profile picture!",
+            [
+              {
+                text: "Cancel",
+                style: "cancel",
+              },
+              {
+                text: "Go to Settings",
+                onPress: () => gotoSettings(),
+              },
+            ]
+          );
         }
       }
     })();

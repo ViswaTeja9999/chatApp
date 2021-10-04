@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, View } from "react-native";
+import { StyleSheet, View, Image } from "react-native";
 import { useTheme } from "@react-navigation/native";
 import { Button, Text } from "react-native-elements";
 
@@ -8,7 +8,8 @@ const WelcomeScreen = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <View style={styles.textContainer}>
-        <Text h4 style={{ color: colors.text }}>
+        <Image source={require("../assets/logo.png")} style={styles.logo} />
+        <Text h4 style={{ color: colors.text, marginTop: 30 }}>
           Welcome to chatApp
         </Text>
       </View>
@@ -35,12 +36,19 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: "center",
     flexDirection: "column",
+    marginTop: 100,
     justifyContent: "space-between",
   },
   textContainer: {
-    marginTop: 30,
+    marginTop: 150,
   },
   footer: {
     marginBottom: 30,
+  },
+  logo: {
+    marginTop: 30,
+    marginBottom: 30,
+    width: 220,
+    height: 200,
   },
 });
